@@ -1,3 +1,18 @@
 .App {
   text-align: center;
+  justify-content: center;
+}
+
+.main-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.text-editor-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
