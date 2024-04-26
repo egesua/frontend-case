@@ -3,7 +3,13 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
+
   const [selectedText, setSelectedText] = useState("");
+
+  const handleMouseUp = () => {
+    console.log(`Selected text:${window.getSelection().toString()}`);
+}
+
 
   const texts = [
     "Devs Just Want To Have Some Fun by Cyndi Lauper",
@@ -14,14 +20,14 @@ function App() {
   ];
 
   return (
-    <div className="App">
+    <div onMouseUp={handleMouseUp} className="App">
       <h1 className="main-title">Hi I'm Tiptap</h1>
       <div className="buttons-container">
         Buttons
       </div>
       <div className="text-editor-container">
-      {texts.map((text) => (
-        <Text text={text} />
+      {texts.map((text, index) => (
+        <Text text={text} key={index}/>
       ))}
       </div>
     </div>

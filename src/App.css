@@ -12,7 +12,15 @@
 
 .text-editor-container {
   width: 100%;
-  display: flex;
   align-items: center;
   justify-content: center;
+  border: 2px solid black;
+}
+
+.text-container {
+  margin: 20px;
+}
+
+.word:hover{
+  background-color: grey;
 }
